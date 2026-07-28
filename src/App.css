@@ -1,0 +1,34 @@
+
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bgExpansion {
+    content: '';
+    position: fixed;
+    z-index: -2;
+    border-radius: 50%;
+    max-height: 200%;
+    max-width: 400%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(230, 255, 255);
+    animation: bgExpansion 2.5s forwards ease-in;
+}
+
+@keyframes bgExpansion {
+    from {
+        width: 0vmax;
+        height: 0vmax;
+    }
+
+    to {
+        width: 150vmax;
+        height: 150vmax;
+    }
+}

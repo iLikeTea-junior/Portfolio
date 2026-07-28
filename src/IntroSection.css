@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Send+Flowers&family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "tailwindcss";
+
+img#profile {
+    width: 550px;
+    height: auto;
+}
+
+div.fishes {
+    position: fixed;
+    z-index: -2;
+    overflow: hidden;
+    top: 100%;
+    width: 300px;
+    height: 300px;
+    background-image: url("./assets/fishes/Fishes1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section.about-me {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2.small-intro {
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+span.name-container {
+    @apply bg-blue-600;
+    width: 180px;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+span.name {
+    font-size: 50px;
+    padding-inline: 10px;
+    color: white;
+    margin-bottom: 6px;
+}
+
+p.description {
+    @apply text-blue-600 font-medium font-[Ubuntu] text-base;
+}

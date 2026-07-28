@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import "tailwindcss";
+
+h2.click-me {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 600;
+  font-style: normal;
+
+  position: fixed;
+  left: 280px;
+  bottom: 170px;
+
+  user-select: none;
+}
+
+h2.songInfo {
+  font-family: "sans-serif";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 23px;
+  letter-spacing: 5px;
+  text-shadow: 1.5px 1.5px 0px black;
+
+  position: fixed;
+  bottom: 10px;
+  z-index: 1;
+
+  color: rgb(125, 125, 125);
+}
+
+img.arrow {
+  position: fixed;
+  bottom: 145px;
+  left: 165px;
+  width: min-content;
+  height: 65px;
+  background-color: transparent;
+  
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* FireFox */
+  -ms-user-select: none; /* old Edge/IE */
+}
+
+section.cassete {
+  background: linear-gradient(45deg, rgb(204, 204, 204), lightblue, cornflowerblue 50%, transparent 0);
+  z-index: 10;
+  @apply fixed bottom-0 left-0 w-60 h-60 flex justify-center items-center;
+}
+
+input[name="volume"] {
+  position: fixed;
+  width: 110px;
+  bottom: 105px;
+  left: -30px;
+  transform: rotate(270deg);
+}
+
+button.stop {
+  --button-shadow:
+    black 2px 2px 2px 0px,
+    inset gray 0px 0px 6px 0px
+  ;
+  @apply bg-red-400 w-7 h-7 fixed z-1 bottom-3 left-3 border-2 rounded-sm border-red-900 shadow-[var(--button-shadow)] cursor-pointer transition-all duration-200;
+}
+
+button.stop.pressed {
+  box-shadow:rgb(124, 124, 124) 0px 0px 4px 1px;
+  transform: translate(2px, 2px);
+  @apply bg-red-600 border-red-800;
+}
+
+button.hide {
+  --button-color: rgb(203, 229, 255);
+
+  transform: rotate(45deg);
+  border-bottom: 5px solid black;
+  border-top: 2px solid gray;
+
+  transition: background-color 300ms, box-shadow 300ms;
+
+  @apply fixed bg-[var(--button-color)] w-115 bottom-19 -left-21 cursor-pointer flex justify-start p-2 pl-13 font-bold;
+}
+
+button.hide.hidden {
+  border-top: 2px solid black;
+}
+
+button.hide.hidden:hover {
+  background: rgb(0, 200, 0);
+}
+
+button.hide:hover {
+  background-color: var(--song-color, rgb(175, 175, 175));
+}
+
+button.next {
+  --button-shadow: 2.5px 2.5px 2px 0px;
+
+  background: black;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @apply fixed bottom-[9px] left-[140px] shadow-[var(--button-shadow)] w-[32px] h-[32px] cursor-pointer transition-all duration-100;
+}
+
+button.next:active,
+button.previous:active {
+  transform: scale(0.9);
+}
+
+button.next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.32) translate(-0.40px, 0.40px);
+}
+
+button.previous {
+  --button-shadow: 2.5px 2.5px 2px 0px;
+
+  background: black;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @apply fixed bottom-[9px] left-[100px] shadow-[var(--button-shadow)] w-[32px] h-[32px] cursor-pointer transition-all duration-100;
+}
+
+button.previous img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.32) translate(0.06px, 0.70px);
+}
+
+.next.pressed {
+  @apply scale-100;
+}
+
+img.play {
+  --shadow-effect: black 0px 0px 6px 0px;
+  background-size: 150px 150px;
+  @apply relative rounded-full shadow-[var(--shadow-effect)];
+  animation: rotation 10s infinite linear;
+}
+
+img.stop {
+  --shadow-effect: black 0px 0px 6px 0px;
+  background-size: 150px 150px;
+  @apply relative rounded-full shadow-[var(--shadow-effect)];
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}

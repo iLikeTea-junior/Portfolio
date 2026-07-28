@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+header {
+    @apply h-20 bg-blue-600 rounded-b-3xl flex items-center px-5 relative;
+}
+
+.extrabg {
+    position: absolute;
+    left: 0;
+    top: -45px;
+    width: 100%;
+    height: 100%;
+    @apply bg-blue-600;
+}
+
+button.contacts {
+    --button-shadow: 3px 3px 2px 0px black;
+    transition: scale 300ms, box-shadow 300ms, transform 300ms, background-color 300ms;
+    z-index: 2;
+    @apply bg-blue-400 text-white font-bold p-2 rounded-md rounded-bl-xl flex items-center justify-between w-60 shadow-[var(--button-shadow)] cursor-pointer;
+}
+
+button.contacts.clicked {
+    transform: scale(0.98);
+    z-index: 2;
+    @apply bg-blue-200 text-blue-600;
+}
+
+button.contacts.default:hover {
+    --button-shadow:4px 4px 5px 0px black;
+    @apply scale-103 shadow-[var(--button-shadow)];
+}
+
+table {
+    @apply bg-white absolute z-1 w-58 top-11 left-6;
+}
+td {
+    transition: color 500ms, background-color 500ms, background-image 500ms;
+    @apply p-[6px];
+}
+
+tr:nth-child(1) > td {
+    @apply pt-6;
+}
+
+tr:nth-child(2) > td {
+    background-image: url("./assets/icons/GitIcon.png");
+    background-repeat: no-repeat;
+    background-size: 85px;
+}
+
+tr:nth-child(2) > td a,
+tr:nth-child(3) > td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+tr:nth-child(2) > td:hover {
+    --git-bgcolor: rgb(240, 80, 46);
+    background-image: url("./assets/icons/GitIconWhite.png");
+    cursor: pointer;
+    @apply bg-[var(--git-bgcolor)] text-white;
+}
+
+tr:nth-child(3) > td {
+    background-image: url("./assets/icons/LinkedInGrayIcon.png");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 10% 0px;
+}
+
+tr:nth-child(3) > td:hover {
+    --linkedIn-bgcolor: rgb(0, 126, 187);
+    background-image: url("./assets/icons/LinkedInIcon.png");
+    cursor: pointer;
+    @apply bg-[var(--linkedIn-bgcolor)] text-white;
+}
+
+tr {
+    transition: color 300ms, background-color 300ms;
+    @apply text-center border-solid border-2 border-gray-400 text-gray-500 font-medium;
+}
+
+.email-copied {
+    --alert-shadow: 4px 4px 2px 0px rgb(215, 215, 215);
+    @apply bg-blue-400 text-white font-medium w-max h-10 absolute top-15 left-[50%] flex items-center p-3 rounded-md shadow-[var(--alert-shadow)];
+}
