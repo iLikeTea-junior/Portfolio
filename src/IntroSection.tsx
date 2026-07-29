@@ -32,17 +32,7 @@ export default function IntroSection({ songsPlaying }: AppProps) {
     const [fontForName, setFontForName] = useState(familyList[0]);
     
     const fishId = useRef<number>(0);
-    const [spawnFishes, setSpawnFishes] = useState(false);
     const [fishes, setFishes] = useState<{id: number, iniB: string, iniL: string, aniT: string, aniL: string}[]>([]);
-
-    // useEffect(() => {
-    //     if (!descIsVisible) return;
-    //     const timeout = setTimeout(() => {
-    //         setSpawnFishes(true);
-    //     }, 3000)
-
-    //     return () => clearTimeout(timeout);
-    // },[descIsVisible])
 
     useEffect(() => {
         if (!descIsVisible) return;

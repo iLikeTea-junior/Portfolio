@@ -21,6 +21,16 @@
     animation: bgExpansion 2.5s forwards ease-in;
 }
 
+.goto-aboutme {
+    position: fixed;
+    z-index: -5;
+    right: 15px;
+    bottom: 45px;
+    height: 20px;
+    width: 20px;
+    background-color: orange;
+}
+
 @keyframes bgExpansion {
     from {
         width: 0vmax;
