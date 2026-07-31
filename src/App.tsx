@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function App() {
-    const [songsPlaying, setSongsPlaying] = useState(false);
+    const [songsPlaying, setSongsPlaying] = useState(true);
     useEffect(() => {
         if (songsPlaying) {
             document.body.classList.add("songs-playing");
@@ -28,9 +28,12 @@ export default function App() {
         />} 
             <Header songsPlaying={songsPlaying}/>
             <IntroSection songsPlaying={songsPlaying} />
-            <CD songsArePlaying={() => setSongsPlaying(true)}/>
+            {/* <CD songsArePlaying={() => setSongsPlaying(true)}/> */}
 
-            <div className="goto-aboutme">About me</div>
+            <div className="goto-aboutme">
+                <p>About me</p>
+                <div/>
+            </div>
         </main>
     )
 }

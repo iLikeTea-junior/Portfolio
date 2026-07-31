@@ -1,19 +1,10 @@
 import "./IntroSection.css";
-import fish1 from "./assets/fishes/Fishes1.png";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 interface AppProps {
     songsPlaying: boolean
-}
-
-interface Fish {
-    id: number,
-    iniB: string,
-    iniL: string,
-    aniT: string,
-    aniL: string
 }
 
 export default function IntroSection({ songsPlaying }: AppProps) {
