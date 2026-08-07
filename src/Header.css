@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 header {
-    @apply h-20 bg-blue-600 rounded-b-3xl flex items-center px-5 relative;
+    @apply z-1 h-20 bg-blue-600 rounded-b-3xl flex items-center px-5 w-full;
 }
 
 .extrabg {
@@ -9,7 +9,7 @@ header {
     left: 0;
     top: -45px;
     width: 100%;
-    height: 100%;
+    height: 50px;
     @apply bg-blue-600;
 }
 
@@ -84,5 +84,5 @@ tr {
 
 .email-copied {
     --alert-shadow: 4px 4px 2px 0px rgb(215, 215, 215);
-    @apply bg-blue-400 text-white font-medium w-max h-10 absolute top-15 left-[50%] flex items-center p-3 rounded-md shadow-[var(--alert-shadow)];
+    @apply z-1 bg-blue-400 text-white font-medium w-max h-10 absolute top-15 left-[50%] flex items-center p-3 rounded-md shadow-[var(--alert-shadow)];
 }

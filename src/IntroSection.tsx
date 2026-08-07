@@ -98,6 +98,7 @@ export default function IntroSection({ songsPlaying }: AppProps) {
                 src="/src/assets/ProfilePic2.png"
                 alt="Profile Picture"
 
+                style={{ zIndex: 1 }}
                 animate={{ rotate: [0, 5, 0], scale: [1, 1.05, 1] }}
                 transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
             />
@@ -117,7 +118,7 @@ export default function IntroSection({ songsPlaying }: AppProps) {
                 ))}
 
 
-            <div className="description" style={{ width: "425px" }}>
+            <div className="description" style={{ width: "425px", zIndex: 1}}>
                 <h2 className="small-intro">Hello, my name is
                     <span className="name-container">
                         <AnimatePresence mode="wait">

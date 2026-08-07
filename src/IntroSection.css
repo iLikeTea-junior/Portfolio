@@ -3,28 +3,16 @@
 @import "tailwindcss";
 
 img#profile {
-    width: 550px;
-    height: auto;
+    @apply w-[550px] h-auto;
 }
 
 div.fishes {
-    position: fixed;
-    z-index: -2;
-    overflow: hidden;
-    top: 100%;
-    width: 300px;
-    height: 300px;
-    background-image: url("./assets/fishes/Fishes1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    @apply fixed -z-0 overflow-hidden top-[100%] w-[300px] h-[300px] bg-[url(./assets/fishes/Fishes1.png)] bg-contain bg-no-repeat;
 }
 
 section.about-me {
-    position: relative;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    --bg-color: rgb(230, 255, 255);
+    @apply w-full h-screen flex justify-center items-center bg-[var(--bg-color)];
 }
 
 h2.small-intro {
@@ -34,26 +22,15 @@ h2.small-intro {
     font-weight: 600;
     font-size: 30px;
 
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
+    @apply flex items-end gap-2;
 }
 
 span.name-container {
-    @apply bg-blue-600;
-    width: 180px;
-
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-    margin-bottom: 10px;
+    @apply w-45 flex justify-center pt-[5px] mb-2.5 bg-blue-600;
 }
 
 span.name {
-    font-size: 50px;
-    padding-inline: 10px;
-    color: white;
-    margin-bottom: 6px;
+    @apply text-[50px] px-2.5 text-white mb-1.5;
 }
 
 p.description {
